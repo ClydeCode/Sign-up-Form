@@ -157,7 +157,7 @@ input {
     height: 1.5rem;
     -webkit-appearance: none;
     appearance: none;
-    font-size: 1.05rem;
+    font-size: 0.9rem;
     width: 260px;
     padding: 10px;
     height: 32px;
@@ -171,6 +171,10 @@ input:focus {
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
+input:invalid {
+    outline: rgb(196, 0, 0);
+}
+
 .input-div {
     position: relative;
 }
@@ -182,6 +186,21 @@ label {
     letter-spacing: 1.3px;
     position: absolute;
     top: -16px;
+}
+
+input[class="error"] {
+    border: 1px solid rgb(196, 0, 0);
+}
+
+span[class="error"] {
+    width: 100%;
+    font-size: 0.625rem;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    position: absolute;
+    bottom: -14px;
+    left: 1px;
+    color: rgb(196, 0, 0);
 }
 
 .container-upper {
